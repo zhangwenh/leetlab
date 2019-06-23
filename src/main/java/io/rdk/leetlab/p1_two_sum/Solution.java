@@ -22,6 +22,7 @@ class Solution {
             int other = target - current;
             if (indexMap.containsKey(other)) {
                 int otherInd = indexMap.get(other);
+                //注意此处顺序
                 ret[0] = otherInd;
                 ret[1] = i;
                 return ret;
