@@ -15,6 +15,8 @@ class Solution {
 
     // 代码解释：
     // 方法一：暴力顺序匹配
+    // 方法二：空间换时间
+    //         
     public int[] twoSum(int[] nums, int target) {
         int[] ret = new int[2];
         if (nums == null || nums.length <= 1) return ret;
