@@ -20,10 +20,6 @@ package io.rdk.leetlab.p2_add_two_numbers;
 //        输出：7 -> 0 -> 8
 //        原因：342 + 465 = 807
 class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        return null;
-    }
-
     public class ListNode {
         int val;
         ListNode next;
@@ -32,4 +28,10 @@ class Solution {
             val = x;
         }
     }
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        return null;
+    }
+
+
 }
