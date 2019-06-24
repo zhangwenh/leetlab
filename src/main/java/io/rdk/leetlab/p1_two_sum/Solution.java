@@ -13,6 +13,8 @@ import java.util.Map;
 //    所以返回 [0, 1]
 class Solution {
 
+    // 代码解释：
+    
     public int[] twoSum(int[] nums, int target) {
         int[] ret = new int[2];
         if (nums == null || nums.length <= 1) return ret;
