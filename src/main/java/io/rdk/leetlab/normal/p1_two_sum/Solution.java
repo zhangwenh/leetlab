@@ -1,4 +1,4 @@
-package io.rdk.leetlab.p1_two_sum;
+package io.rdk.leetlab.normal.p1_two_sum;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package io.rdk.leetlab.p2_add_two_numbers;
+package io.rdk.leetlab.normal.p2_add_two_numbers;
 
 /**
  * Definition for singly-linked list.
