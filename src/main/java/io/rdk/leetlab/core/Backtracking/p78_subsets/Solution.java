@@ -19,13 +19,13 @@ public class Solution {
         result.add(new ArrayList<>()); // 空值
 
         for (int num : nums) {
-            List<List<Integer>> tempList = new ArrayList<>(); // 要循环result，因此这里需要增加一个临时listß
+            List<List<Integer>> newSubsets = new ArrayList<>(); // 要循环result，因此这里需要增加一个临时listß
             for (List<Integer> subList : result) {
-                List<Integer> copySubList = new ArrayList<>(subList);
-                copySubList.add(num);
-                tempList.add(copySubList);
+                List<Integer> newSubset = new ArrayList<>(subList); //复制结果中已经存在的子集
+                newSubset.add(num);
+                newSubsets.add(newSubset);
             }
-            result.addAll(tempList);
+            result.addAll(newSubsets);
         }
 
         return result;
