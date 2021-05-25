@@ -16,7 +16,6 @@ public class Solution {
             } else {
                 countEven++;
             }
-
         }
         return Math.min(countOdd, countEven);
     }
