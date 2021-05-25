@@ -1,5 +1,9 @@
-package io.rdk.leetlab.core.Recursion.p506_fibonacci_number;
+package io.rdk.leetlab.core.Recursion.p509_fibonacci_number;
 
+/**
+ * 递归法
+ * 容易溢出，建议使用迭代法
+ */
 public class Solution {
 
     public int fib(int n) {
