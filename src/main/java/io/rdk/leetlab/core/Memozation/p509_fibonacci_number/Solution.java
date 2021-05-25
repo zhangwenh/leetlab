@@ -1,7 +1,7 @@
 package io.rdk.leetlab.core.Memozation.p509_fibonacci_number;
 
 /**
- *
+ * 记忆化搜索
  */
 public class Solution {
     int[] memArr = new int[30]; // 根据题意最大不会超过30
@@ -23,6 +23,6 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        System.out.println(s.fib(6));
+        System.out.println(s.fib(5));
     }
 }

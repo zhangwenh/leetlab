@@ -13,7 +13,6 @@ public class Solution {
         List<List<Integer>> res = new ArrayList<>();
         dfs(nums, res, 0, new ArrayList<>());
         return res;
-
     }
 
     private void dfs(int[] nums, List<List<Integer>> res, int index, ArrayList<Integer> sublist) {

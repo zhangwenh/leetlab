@@ -1,10 +1,7 @@
 package io.rdk.leetlab.core.Queue.p225_implement_stack_using_queue;
 
-import io.rdk.leetlab.normal.p283_move_zeroes.Solution;
-
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 
 class MyStack {
 
