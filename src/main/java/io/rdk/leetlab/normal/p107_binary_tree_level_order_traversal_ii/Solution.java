@@ -1,27 +1,24 @@
-package io.rdk.leetlab.core.BFS.p102_binary_tree_level_order_traversal;
+package io.rdk.leetlab.normal.p107_binary_tree_level_order_traversal_ii;
 
 import io.rdk.leetlab.pub.TreeNode;
 
 import java.util.*;
 
-/**
- * BFS实现
- */
-class Solution {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+public class Solution {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         if(root == null){
             return new ArrayList<>();
         }
         List<List<Integer>> resList = new ArrayList<>();
         Deque<TreeNode> queue = new ArrayDeque<>();
-        queue.add(root); // 把头放进去
-        while(queue.size() > 0){ // 整个对象里有内容
-            int size = queue.size(); // 当前层级的元素数量
+        queue.add(root);
+        while(queue.size() > 0){
+            int size = queue.size();
             List<Integer> tempList = new ArrayList<>();
-            while(size > 0){ // 当前层级有元素
+            while(size > 0){
                 TreeNode treeNode = queue.pop();
                 tempList.add(treeNode.val);
-                size--;
+                size --;
                 TreeNode leftNode = treeNode.left;
                 if(leftNode != null){
                     queue.add(leftNode);
@@ -33,6 +30,7 @@ class Solution {
             }
             resList.add(new ArrayList<>(tempList));
         }
+        Collections.reverse(resList);
         return resList;
     }
 }

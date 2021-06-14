@@ -1,13 +1,13 @@
-package io.rdk.leetlab.core.BFS.p102_binary_tree_level_order_traversal;
+package io.rdk.leetlab.normal.p102_binary_tree_level_order_traversal;
 
 import io.rdk.leetlab.pub.TreeNode;
 
 import java.util.*;
 
 /**
- * BFS实现
+ * BFS，使用了栈，运行时间更慢
  */
-class Solution {
+public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if(root == null){
             return new ArrayList<>();

@@ -1,5 +1,7 @@
 package io.rdk.leetlab.core.TwoPointers.p141_linked_list_cycle;
 
+import io.rdk.leetlab.pub.ListNode;
+
 /**
  * Definition for singly-linked list.
  * class ListNode {

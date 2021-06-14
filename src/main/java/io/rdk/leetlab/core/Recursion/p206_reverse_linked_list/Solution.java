@@ -1,5 +1,7 @@
 package io.rdk.leetlab.core.Recursion.p206_reverse_linked_list;
 
+import io.rdk.leetlab.pub.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {

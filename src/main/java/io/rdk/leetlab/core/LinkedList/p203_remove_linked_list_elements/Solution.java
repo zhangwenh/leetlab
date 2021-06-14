@@ -1,5 +1,7 @@
 package io.rdk.leetlab.core.LinkedList.p203_remove_linked_list_elements;
 
+import io.rdk.leetlab.pub.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {

@@ -1,5 +1,7 @@
 package io.rdk.leetlab.core.DFS.p938_range_sum_of_bst;
 
+import io.rdk.leetlab.pub.TreeNode;
+
 public class Solution {
 
     // 1、root 节点为空
