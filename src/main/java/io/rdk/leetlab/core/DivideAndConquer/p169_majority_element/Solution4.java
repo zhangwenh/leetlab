@@ -3,7 +3,7 @@ package io.rdk.leetlab.core.DivideAndConquer.p169_majority_element;
 /**
  * 摩尔投票法
  *
- * 两两比较，只要不同就都抵消kill，重数一定是最后剩下来
+ * 两两比较，只要不同就都抵消kill，众数一定是最后剩下来
  *
  */
 public class Solution4 {
