@@ -13,6 +13,7 @@ import io.rdk.leetlab.pub.ListNode;
  * }
  */
 class Solution {
+    // 迭代法
     public ListNode reverseList(ListNode head) {
         // 迭代法
         // 1、设定新节点dm，作为头，最后将返回dm.next
@@ -33,4 +34,20 @@ class Solution {
         }
         return dm.next;
     }
+
+    // 递归
+    public ListNode reverseList_recursive(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode res = reverseList_recursive(head.next);
+        // 1->2->3(head)(res)->null
+        // 1->2(head)->3(res)->null
+        // 1->2(head)(->null)<-3(res)
+        // 1(head)<-2<-3(res)
+        head.next.next = head;
+        head.next = null;
+        return res;
+    }
+
 }
