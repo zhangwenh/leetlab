@@ -5,7 +5,7 @@ import io.rdk.leetlab.pub.TreeNode;
 public class Solution {
 
     // 1、root 节点为空
-    // 返回 00。
+    // 返回 0。
     // 2、root 节点的值大于 high
     // 由于二叉搜索树右子树上所有节点的值均大于根节点的值，即均大于high，故无需考虑右子树，返回左子树的范围和。
     // 3、root 节点的值小于 low
