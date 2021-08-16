@@ -2,6 +2,9 @@ package io.rdk.leetlab.normal.p938_range_sum_of_bst;
 
 import io.rdk.leetlab.pub.TreeNode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -32,5 +35,29 @@ class Solution {
         }else{
             return val + rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high);
         }
+    }
+
+    public int rangeSumBST1(TreeNode root, int low, int high) {
+        // BFS法
+        // 基于队列
+        int res = 0;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()){
+            TreeNode node = q.poll();
+            if(node != null){
+                int val = node.val;
+                if(val < low){
+                    q.add(node.right);
+                }else if(val > high){
+                    q.add(node.left);
+                }else{
+                    res += val;
+                    q.add(node.left);
+                    q.add(node.right);
+                }
+            }
+        }
+        return res;
     }
 }
