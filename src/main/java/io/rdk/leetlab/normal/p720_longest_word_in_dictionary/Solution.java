@@ -6,7 +6,6 @@ import java.util.Set;
 
 public class Solution {
     public static void main(String[] args) {
-        // todo
         String[] words = new String[]{"w","wo","wor","worl", "world"};
         Solution solution = new Solution();
         String res = solution.longestWord(words);
@@ -40,13 +39,6 @@ public class Solution {
                 }
             }
         }
-        return res;
-    }
-
-    public String longestWord1(String[] words) {
-        // trie法
-        String res = "";
-        // todo
         return res;
     }
 }
