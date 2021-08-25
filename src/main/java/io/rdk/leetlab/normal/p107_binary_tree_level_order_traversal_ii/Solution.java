@@ -9,7 +9,7 @@ public class Solution {
         if(root == null){
             return new ArrayList<>();
         }
-        List<List<Integer>> resList = new ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
         Deque<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
         while(queue.size() > 0){
@@ -28,9 +28,9 @@ public class Solution {
                     queue.add(rightNode);
                 }
             }
-            resList.add(new ArrayList<>(tempList));
+            res.add(new ArrayList<>(tempList));
         }
-        Collections.reverse(resList);
-        return resList;
+        Collections.reverse(res);
+        return res;
     }
 }

@@ -12,7 +12,7 @@ public class Solution {
         if(root == null){
             return new ArrayList<>();
         }
-        List<List<Integer>> resList = new ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
         Deque<TreeNode> queue = new ArrayDeque<>();
         queue.add(root); // 把头放进去
         while(queue.size() > 0){ // 整个对象里有内容
@@ -31,8 +31,8 @@ public class Solution {
                     queue.add(rightNode);
                 }
             }
-            resList.add(new ArrayList<>(tempList));
+            res.add(new ArrayList<>(tempList));
         }
-        return resList;
+        return res;
     }
 }

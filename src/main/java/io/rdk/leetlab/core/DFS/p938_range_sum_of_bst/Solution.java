@@ -16,10 +16,10 @@ public class Solution {
         if(root == null){
             return 0;
         }
-        if(root.val > high){
+        if(root.val > high){ // 只看左子树
             return rangeSumBST(root.left,low,high);
         }
-        if(root.val < low){
+        if(root.val < low){ // 只看右子树
             return rangeSumBST(root.right,low,high);
         }
         return root.val+rangeSumBST(root.left,low,high)+rangeSumBST(root.right,low,high);
