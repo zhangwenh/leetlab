@@ -21,7 +21,7 @@ public class Solution {
                 }
             }
         }
-        return stack.empty();
+        return stack.empty(); // 注意
     }
 
     public static void main(String[] args) {

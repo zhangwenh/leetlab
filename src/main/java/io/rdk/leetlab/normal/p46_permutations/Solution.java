@@ -20,7 +20,7 @@ public class Solution {
     private void backtracking(int[] nums, List<List<Integer>> res, Map<Integer, Boolean> visited, ArrayList<Integer> curList) {
         // 退出条件
         if(curList.size() == nums.length){ // 说明都被访问到了 // visited.containsValue(false)性能差
-            res.add(new ArrayList<>(curList));
+            res.add(new ArrayList<>(curList)); //这里务必要注意
         }else{
             for (int num : nums) {
                 if(!visited.get(num)){ // 没访问过

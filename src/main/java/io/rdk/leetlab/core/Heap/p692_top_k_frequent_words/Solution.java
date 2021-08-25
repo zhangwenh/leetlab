@@ -7,13 +7,14 @@ import java.util.*;
  */
 class Solution {
     public List<String> topKFrequent(String[] words, int k) {
-
+        // hashmap解决计数的问题
+        // heap解决前k的问题
         HashMap<String, Integer> map = new HashMap<>();
         for (String word : words) {
             map.put(word, map.getOrDefault(word, 0) + 1);
         }
 
-        PriorityQueue<String> pq = new PriorityQueue<>((o1, o2) -> {
+        PriorityQueue<String> q = new PriorityQueue<>((o1, o2) -> {
             Integer o1Count = map.get(o1);
             Integer o2Count = map.get(o2);
             if (o1Count.equals(o2Count)) {
@@ -24,14 +25,13 @@ class Solution {
         });
 
         // keySet() 方法返回值是 Map 中 key 值的集合
-        for (String s : map.keySet()) {
-            pq.offer(s);
-        }
+        q.addAll(map.keySet());
 
-        List<String> list = new ArrayList<>();
-        for (int i=0;i<k;i++) {
-            list.add(pq.poll());
+        List<String> res = new ArrayList<>();
+        while(k > 0 && !q.isEmpty()){
+            res.add(q.poll());
+            k--;
         }
-        return list;
+        return res;
     }
 }

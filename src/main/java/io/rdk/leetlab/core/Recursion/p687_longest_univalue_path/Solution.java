@@ -3,36 +3,29 @@ package io.rdk.leetlab.core.Recursion.p687_longest_univalue_path;
 import io.rdk.leetlab.pub.TreeNode;
 
 public class Solution {
-    int ans = 0;    // 结果
+    int ans;    // 结果
     public int longestUnivaluePath(TreeNode root) {
+        ans = 0;
         helper(root);
         return ans;
     }
 
     // 搜索以root为起点的最长同值路径
     // 要么经过左子树，要么经过右子树
-    public int helper(TreeNode root) {
-        if (root == null) {
-            return 0;
+    public int helper(TreeNode node) {
+        if (node == null) return 0;
+        int leftVal = helper(node.left);
+        int rightVal = helper(node.right);
+        int arrowLeft = 0, arrowRight = 0;
+        if(node.left != null && node.left.val == node.val){
+            arrowLeft = leftVal + 1;
         }
-        int maxLength = 0;  // 以root为起点的最长同值路径
-        int leftLength = helper(root.left);     // 以root.left为起点的最长同值路径
-        int rightLength = helper(root.right);   // 以root.right为起点的最长同值路径
-        // 情况2，不需要更新maxLength，但要更新结果
-        if (root.left != null && root.right != null &&
-                root.val == root.left.val && root.val == root.right.val) {
-            ans = Math.max(ans, leftLength + rightLength + 2);
-        }
-        // 从左右子树中选取最长同值路径
-        if (root.left != null && root.val == root.left.val) {
-            maxLength = leftLength + 1;
-        }
-        if (root.right != null && root.val == root.right.val) {
-            maxLength = Math.max(maxLength, rightLength + 1);
+        if(node.right != null && node.right.val == node.val){
+            arrowRight = rightVal + 1;
         }
         // 更新结果
-        ans = Math.max(ans, maxLength);
-        return maxLength;
+        ans = Math.max(ans, arrowLeft + arrowRight);
+        return Math.max(arrowLeft, arrowRight);
     }
 }
 /**

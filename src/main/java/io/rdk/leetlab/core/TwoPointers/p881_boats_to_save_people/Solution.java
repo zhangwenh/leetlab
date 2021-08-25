@@ -18,5 +18,28 @@ class Solution {
             right--;
         }
         return count;
+
+//        Arrays.sort(people);
+//        int res = 0;
+//        // 轻->重
+//        // 每艘船最多可同时载两人，因此双指针
+//        for(int i = 0,j = people.length-1; i <= j;){
+//            if(i == j){
+//                res++;
+//                j--;
+//            }else{
+//                int big = people[j];
+//                int small = people[i];
+//                if((big+small) > limit){ //只放大的
+//                    res++;
+//                    j--;
+//                }else if((big+small) <= limit){ //放1大1小
+//                    res++;
+//                    i++;
+//                    j--;
+//                }
+//            }
+//        }
+//        return res;
     }
 }

@@ -1,4 +1,4 @@
-package io.rdk.leetlab.core.HashTable.p496_next_greater_element_l;
+package io.rdk.leetlab.core.Set.p705_design_hashset;
 
 import java.util.Iterator;
 import java.util.LinkedList;

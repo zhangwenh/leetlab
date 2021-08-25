@@ -15,6 +15,8 @@ import io.rdk.leetlab.pub.ListNode;
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
+        // 快慢指针法
+        // 原理：如果不是环，最后一个node的next一定是null；反之，快慢指针总有遇到的一刻
         if (head == null || head.next == null) {
             return false;
         }

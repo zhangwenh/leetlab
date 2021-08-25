@@ -4,22 +4,21 @@ public class Solution {
     public int search(int[] nums, int target) {
         // 二分查找
         // 由于排过序，因此可以用二分法
+        if(nums == null || nums.length == 0){
+            return -1;
+        }
+        int l = 0;
+        int r = nums.length-1;
         int res = -1;
-        int l = 0, r = nums.length - 1;
-        int midPre = -1;
-        while(l<=r){ // 注意：一定要带等号！！并且在后面判断复制时r=mid-1，l=mid+1
+        while(l <= r){
             int mid = l+(r-l)/2;
-            if(mid == midPre){
-                break;
-            }
-            midPre = mid;
-            if(target == nums[mid]) {
-                res = mid;
-                break;
-            }else if(target < nums[mid]){
-                r = mid-1;
+            int midV = nums[mid];
+            if(target == midV){
+                return mid;
+            }else if(target > midV){
+                l = mid + 1;
             }else{
-                l = mid+1;
+                r = mid - 1;
             }
         }
         return res;

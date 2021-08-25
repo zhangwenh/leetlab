@@ -27,7 +27,7 @@ public class Solution {
         if(leftCnt<rightCnt){
             return;
         }
-        if(leftCnt==n && rightCnt== n){ // 已经成立，这条路径结束
+        if(leftCnt == n && rightCnt == n){ // 已经成立，这条路径结束
             result.add(curStr);
             return;
         }

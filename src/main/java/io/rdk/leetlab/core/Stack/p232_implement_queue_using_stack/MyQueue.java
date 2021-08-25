@@ -22,7 +22,7 @@ class MyQueue {
     /** Removes the element from in front of queue and returns that element. */
     public int pop() {
         if (outStack.isEmpty()) {
-            in2out();
+            in2out();// 要出的时候，做一次in到out栈的过渡
         }
         return outStack.pop();
     }

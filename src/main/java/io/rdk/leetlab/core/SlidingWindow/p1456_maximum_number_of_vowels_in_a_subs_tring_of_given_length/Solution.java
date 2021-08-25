@@ -10,14 +10,14 @@ class Solution {
         for (int i = 0; i < k; i++) {
             tempCnt += isVowel(charArr[i]);
         }
-        int count = tempCnt;
+        int res = tempCnt;
         for (int i = k; i < charArr.length; i++) {
             int curPrev = isVowel(charArr[i-k]);
             int curTail = isVowel(charArr[i]);
             tempCnt = tempCnt-curPrev+curTail;
-            count = Math.max(count,tempCnt);
+            res = Math.max(res,tempCnt);
         }
-        return count;
+        return res;
     }
     private int isVowel(char ch) {
         return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ? 1 : 0;

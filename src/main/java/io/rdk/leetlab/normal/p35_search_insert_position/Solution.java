@@ -12,13 +12,13 @@ public class Solution {
         }else if(target>nums[right]){
             return right+1;
         }
-        while (left < right){
+        while (left < right){ // 存在中间值，因此不能等于
             mid = left+(right-left)/2;
             int midVal = nums[mid];
             if(target > midVal){
                 left = mid+1;
             }else{
-                right = mid;
+                right = mid; // 存在中间值，因此不能-1
             }
         }
         return left;
