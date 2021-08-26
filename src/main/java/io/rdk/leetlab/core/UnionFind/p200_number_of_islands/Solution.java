@@ -8,12 +8,12 @@ public class Solution {
         int landCount = 0;
         int rows = grid.length;
         int cols = grid[0].length;
+        int[][] directions = new int[][]{{0,1},{1,0},{-1,0},{0,-1}};
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 char curr = grid[i][j];
                 if(curr == '1'){
                     landCount++;
-                    int[][] directions = new int[][]{{0,1}, {1, 0}};
                     for (int[] dir : directions) {
                         int x = i + dir[0];
                         int y = j + dir[1];

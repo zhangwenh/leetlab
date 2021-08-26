@@ -41,7 +41,7 @@ public class Solution {
         }
 
         grid[x][y] = '0';//把自己变成0
-        // 把四周变成0
+        // 把四周变成0，注意一定是上下左右都要！
         dfs(grid, x-1, y, rowSize, colSize);
         dfs(grid, x+1, y, rowSize, colSize);
         dfs(grid, x, y-1, rowSize, colSize);

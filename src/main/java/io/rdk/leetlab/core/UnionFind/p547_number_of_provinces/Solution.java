@@ -20,13 +20,13 @@ public class Solution {
         UnionFindOne uf = new UnionFindOne(n);
         // 遍历每个顶点，将当前顶点与其邻接点进行合并
         for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
+            for (int j = i + 1; j < n; j++) { // 去掉重复合并的
                 if (isConnected[i][j] == 1) {
                     uf.union(i, j);
                 }
             }
         }
-        // 返回最终合并后的集合的数量
+        // 返回最终合并后的集合的数量（总数-相连）
         return uf.getCount();
     }
 }

@@ -5,7 +5,7 @@ public class Solution {
     // 最短不就是弄到相邻的两堆叠叠乐，
     // 把小堆扔到大堆就是最少代价
     // 其实就找到奇数位置的个数和偶数位置的个数
-    public int minCostToMoveChips(int[] position) {
+    public int minCostToMoveChips(int[] position) { // 注意：参数是位置
         //向偶数维移动需要的次数
         int countOdd = 0;
         //向奇数位移动需要的次数

@@ -3,13 +3,14 @@ package io.rdk.leetlab.core.Greedy.p55_jump_game;
 public class Solution {
     public boolean canJump(int[] nums) {
         int n = nums.length;
-        int maxReach = 0;
+        int maxReach = 0; // 可以到达的最远位置
         for (int i = 0; i < n; i++) {
-            if(maxReach>=i){ // 必须在范围内
-                maxReach = Math.max(maxReach,i+nums[i]);
-                if(maxReach>=n-1){ // 大于终点
-                    return true;
-                }
+            if(i > maxReach){ // 表示遍历到了一个超过可达的最远位置
+                return false;
+            }
+            maxReach = Math.max(maxReach,i+nums[i]);
+            if(maxReach >= n-1){ // 大于终点
+                return true;
             }
         }
         return false;
