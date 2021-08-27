@@ -27,7 +27,4 @@ class Solution {
         return ret.next;
     }
 
-    public static void main(String[] args) {
-
-    }
 }
