@@ -8,7 +8,7 @@ public class Solution {
             if(i > maxReach){ // 表示遍历到了一个超过可达的最远位置
                 return false;
             }
-            maxReach = Math.max(maxReach,i+nums[i]);
+            maxReach = Math.max(maxReach, i + nums[i]);
             if(maxReach >= n-1){ // 大于终点
                 return true;
             }
