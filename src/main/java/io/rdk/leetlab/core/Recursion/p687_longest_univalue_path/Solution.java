@@ -3,9 +3,8 @@ package io.rdk.leetlab.core.Recursion.p687_longest_univalue_path;
 import io.rdk.leetlab.pub.TreeNode;
 
 public class Solution {
-    int ans;    // 结果
+    int ans = 0;    // 结果
     public int longestUnivaluePath(TreeNode root) {
-        ans = 0;
         helper(root);
         return ans;
     }
