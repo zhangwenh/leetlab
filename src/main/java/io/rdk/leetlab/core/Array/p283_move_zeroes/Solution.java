@@ -5,7 +5,7 @@ public class Solution {
         if(nums!=null && nums.length>1){
             int index = 0;
             for(int i = 0; i<nums.length; i++){
-                if(nums[i]!=0){ // 若为0，则用下一个非0值代替
+                if(nums[i]!=0){ // 若为0，则用下一个非0值代替，本质就是双指针
                     nums[index] = nums[i];
                     index++;
                 }
