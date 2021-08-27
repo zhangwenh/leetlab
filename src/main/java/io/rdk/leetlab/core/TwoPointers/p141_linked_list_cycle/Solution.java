@@ -23,7 +23,7 @@ public class Solution {
         ListNode slow = head;
         ListNode fast = head.next;
         while (slow != fast) {
-            if (fast == null || fast.next == null) {
+            if (fast == null || fast.next == null) { // 这里注意要判断fast，否则会nullpointer
                 return false;
             }
             slow = slow.next;

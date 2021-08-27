@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 class Solution {
     public int numRescueBoats(int[] people, int limit) {
+        // 排序，大加小
         // 先排序, count = 0
         // [left,....,right] 左最小，右最大
         // count++,right--
