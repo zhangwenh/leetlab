@@ -18,7 +18,7 @@ public class Solution {
         int n = isConnected.length;
         // 初始化并查集
         UnionFindOne uf = new UnionFindOne(n);
-        // 遍历每个顶点，将当前顶点与其邻接点进行合并
+        // 遍历对角线右边每个顶点，将当前顶点与其邻接点进行合并
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) { // 去掉重复合并的
                 if (isConnected[i][j] == 1) {

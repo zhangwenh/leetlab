@@ -10,7 +10,7 @@ public class Solution {
         // 遍历取得每个位置上的最大子序列和，其中最大即为最大子序列和
         for (int i = 1; i < nums.length; i++) {
             // max(pre+cur,cur)当前节点下最大值
-            pre = Math.max(pre+nums[i],nums[i]);
+            pre = Math.max(pre+nums[i],nums[i]); // 由于要后续连贯，因此是 当前值 与"前序加当前值"比大小
             res = Math.max(pre,res);
         }
         return res;
