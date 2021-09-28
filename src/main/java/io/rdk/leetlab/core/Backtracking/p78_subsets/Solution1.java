@@ -22,17 +22,17 @@ public class Solution1 {
      *
      * @param nums
      * @param res
-     * @param length 深度
+     * @param len 深度
      * @param index 当前遍历的节点索引
      * @param list
      */
-    private void backtracking(int[] nums, List<List<Integer>> res, int length, int index, List<Integer> list) {
-        if (list.size() == length) { // 子集的长度等于要找的深度的时候，满足条件，就退出
+    private void backtracking(int[] nums, List<List<Integer>> res, int len, int index, List<Integer> list) {
+        if (list.size() == len) { // 子集的长度等于要找的深度的时候，满足条件，就退出
             res.add(new ArrayList<>(list));
         }else{
             for(int i = index; i < nums.length; i++) { // 当前节点开始的下级节点都放到集合中去
                 list.add(nums[i]);
-                backtracking(nums, res, length, i+1, list); // 当前节点的下级遍历/递归
+                backtracking(nums, res, len, i+1, list); // 当前节点的下级遍历/递归 // 注意这里要i+1
                 list.remove(list.size()-1); // 把刚刚加入的元素去掉，从而开始遍历兄弟节点
             }
         }

@@ -17,7 +17,7 @@ public class Solution {
         int rightVal = helper(node.right);
         int arrowLeft = 0, arrowRight = 0;
         if(node.left != null && node.left.val == node.val){
-            arrowLeft = leftVal + 1;
+            arrowLeft = leftVal + 1; // 不能直接用leftval是因为，存在node与node子节点value不同的情况。该情况发生时，子节点的汇总长度应该为0了
         }
         if(node.right != null && node.right.val == node.val){
             arrowRight = rightVal + 1;

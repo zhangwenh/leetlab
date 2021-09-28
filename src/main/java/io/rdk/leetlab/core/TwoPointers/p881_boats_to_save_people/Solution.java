@@ -9,16 +9,24 @@ class Solution {
         // [left,....,right] 左最小，右最大
         // count++,right--
         // if leftVal+rightVal<=limit，则left++
-        int count = 0;
-        Arrays.sort(people);
-        int left = 0,right = people.length-1;
-        while (left <= right) {
-            count++;
-            if (people[left] + people[right] <= limit)
-                left++;
-            right--;
-        }
-        return count;
+            Arrays.sort(people);
+            int l = 0, r = people.length - 1;
+            int res = 0;
+            while(l < r){
+                int vall = people[l];
+                int valr = people[r];
+                if(vall + valr <= limit){
+                    l++;
+                    r--;
+                }else{
+                    r--;
+                }
+                res++;
+            }
+            if(l==r){
+                res++;
+            }
+            return res;
 
 //        Arrays.sort(people);
 //        int res = 0;
